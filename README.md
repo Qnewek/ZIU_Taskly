@@ -125,23 +125,6 @@ src/
 
 ---
 
-## Punktacja według kryteriów
-
-| Kryterium                      | Max | Realizacja                                            |
-|-------------------------------|-----|-------------------------------------------------------|
-| 1. Prototypowanie UI           | 6   | Lo-fi wireframes + hi-fi w Figma (README)             |
-| 2. Implementacja interfejsu    | 7   | Komponenty wielokrotnego użytku, 4 widoki, MUI v6     |
-| 3. Responsive Design           | 5   | Mobile sidebar+bottom nav, desktop drawer, breakpointy|
-| 4. Formularze i walidacja      | 5   | React Hook Form + Zod, komunikaty błędów, aria        |
-| 5. Dostępność WCAG             | 8   | Semantyczny HTML, aria-labels, focus-visible, kontrast|
-| 6. State Management            | 4   | Context + useReducer, loading/success/error states    |
-| 7. Integracja z API            | 5   | MSW: GET/POST/PUT/DELETE, obsługa błędów sieciowych   |
-| 8. Mikrointerakcje             | 5   | Framer Motion: page transitions, stagger, toast, FAB  |
-| 9. Deployment i dokumentacja   | 5   | Vercel, GitHub z historią commitów, README            |
-| **Łącznie**                   | **50** | **~47–50 pkt**                                    |
-
----
-
 ## UX — Notatka projektowa
 
 ### Grupa docelowa
