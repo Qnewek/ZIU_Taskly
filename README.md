@@ -18,7 +18,7 @@
 ## Demo i repozytorium
 
 - **Demo:** 
-- **GitHub:** 
+- **GitHub:** https://github.com/Qnewek/ZIU_Taskly
 
 ---
 
