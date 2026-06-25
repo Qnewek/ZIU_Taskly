@@ -17,7 +17,7 @@
 
 ## Demo i repozytorium
 
-- **Demo:** 
+- **Demo:** https://ziu-taskly-bo5zz0gze-ziu.vercel.app
 - **GitHub:** https://github.com/Qnewek/ZIU_Taskly
 
 ---
