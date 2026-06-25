@@ -9,13 +9,11 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 
 async function enableMocking() {
-  if (import.meta.env.DEV) {
-    try {
-      const { worker } = await import('./api/mocks/browser');
-      return worker.start({ onUnhandledRequest: 'bypass' });
-    } catch {
-      console.info('[MSW] Uruchom: npx msw init public/ --save');
-    }
+  try {
+    const { worker } = await import('./api/mocks/browser');
+    return worker.start({ onUnhandledRequest: 'bypass' });
+  } catch {
+    console.info('[MSW] Uruchom: npx msw init public/ --save');
   }
 }
 
