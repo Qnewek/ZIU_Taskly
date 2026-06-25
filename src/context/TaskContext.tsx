@@ -3,6 +3,8 @@ import type { Task, TaskAction, FilterType, SortType } from '../types/task.types
 
 function taskReducer(state: Task[], action: TaskAction): Task[] {
   switch (action.type) {
+    case 'SET':
+      return action.payload;
     case 'ADD':
       return [{ ...action.payload, id: crypto.randomUUID(), createdAt: new Date().toISOString(), updatedAt: new Date().toISOString() }, ...state];
     case 'UPDATE':

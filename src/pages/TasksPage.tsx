@@ -20,7 +20,7 @@ interface Props {
   onShowToast: (msg: string, sev: 'success' | 'error') => void;
 }
 
-export function TasksPage({ isLoading, onAdd, onShowToast }: Props) {
+export function TasksPage({ isLoading, onAdd: _onAdd, onShowToast }: Props) {
   const navigate  = useNavigate();
   const { dispatch } = useTaskContext();
   const updateTask = useUpdateTask();

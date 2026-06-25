@@ -14,7 +14,6 @@ import { useToast }      from './hooks/useToast';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { api } from './api/tasksApi';
 import { useTaskContext } from './context/TaskContext';
-import { useEffect } from 'react';
 import type { TaskFormData } from './components/forms/TaskForm';
 
 const qc = new QueryClient({ defaultOptions: { queries: { retry: 2, staleTime: 60_000 } } });
@@ -29,7 +28,7 @@ function InnerApp() {
     queryKey: ['tasks'],
     queryFn:  async () => {
       const data = await api.getTasks();
-      data.forEach(task => dispatch({ type: 'ADD', payload: task }));
+      dispatch({ type: 'SET', payload: data });
       return data;
     },
     staleTime: 60_000,
@@ -38,8 +37,7 @@ function InnerApp() {
 
   const createMutation = useMutation({
     mutationFn: api.createTask,
-    onSuccess: (task) => {
-      dispatch({ type: 'ADD', payload: task });
+    onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['tasks'] });
       showToast('Zadanie dodane!', 'success');
     },

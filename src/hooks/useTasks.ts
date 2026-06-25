@@ -1,7 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { api } from '../api/tasksApi';
 import { useTaskContext } from '../context/TaskContext';
-import type { Task } from '../types/task.types';
 import { useEffect } from 'react';
 
 const TASKS_KEY = ['tasks'] as const;
@@ -18,9 +17,9 @@ export function useTasks() {
 
   useEffect(() => {
     if (query.data) {
-      query.data.forEach(task => dispatch({ type: 'ADD', payload: task }));
+      dispatch({ type: 'SET', payload: query.data });
     }
-  }, [query.data]);
+  }, [query.data, dispatch]);
 
   return query;
 }

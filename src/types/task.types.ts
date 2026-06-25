@@ -13,6 +13,7 @@ export interface Task {
 }
 
 export type TaskAction =
+  | { type: 'SET';    payload: Task[] }
   | { type: 'ADD';    payload: Omit<Task, 'id' | 'createdAt' | 'updatedAt'> }
   | { type: 'UPDATE'; payload: Task }
   | { type: 'DELETE'; payload: string }
