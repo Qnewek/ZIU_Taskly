@@ -120,12 +120,12 @@ export function DashboardPage() {
    {/* Overdue alert */}
 {overdue > 0 && (
   <motion.div initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }}>
-    <Card sx={{ mb: 3, bgcolor: '#fef2f2', border: '1px solid', borderColor: '#991b1b' }}>
+    <Card sx={{ mb: 3, bgcolor: '#991b1b', border: '1px solid', borderColor: '#7f1d1d' }}>
       <CardContent>
-        <Typography variant="body1" fontWeight={700} sx={{ color: '#7f1d1d' }}>
+        <Typography variant="body1" fontWeight={700} sx={{ color: '#ffffff' }}>
           ⚠ {overdue} {overdue === 1 ? 'zadanie ma' : 'zadania mają'} przekroczony termin!
         </Typography>
-        <Button size="small" onClick={() => navigate('/tasks')} sx={{ mt: 1, color: '#991b1b', borderColor: '#991b1b', '&:hover': { bgcolor: '#fee2e2' } }}>
+        <Button size="small" onClick={() => navigate('/tasks')} sx={{ mt: 1, color: '#fecaca', borderColor: '#fecaca', '&:hover': { bgcolor: '#7f1d1d' } }}>
           Przejdź do zadań →
         </Button>
       </CardContent>
