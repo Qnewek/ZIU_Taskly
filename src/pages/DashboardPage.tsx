@@ -117,21 +117,21 @@ export function DashboardPage() {
         </Grid>
       </motion.div>
 
-      {/* Overdue alert */}
-      {overdue > 0 && (
-        <motion.div initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }}>
-          <Card sx={{ mb: 3, bgcolor: 'error.light', border: '1px solid', borderColor: 'error.main' }}>
-            <CardContent>
-              <Typography variant="body1" fontWeight={700} color="error.dark">
-                ⚠ {overdue} {overdue === 1 ? 'zadanie ma' : 'zadania mają'} przekroczony termin!
-              </Typography>
-              <Button size="small" color="error" onClick={() => navigate('/tasks')} sx={{ mt: 1 }}>
-                Przejdź do zadań →
-              </Button>
-            </CardContent>
-          </Card>
-        </motion.div>
-      )}
+   {/* Overdue alert */}
+{overdue > 0 && (
+  <motion.div initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }}>
+    <Card sx={{ mb: 3, bgcolor: '#fef2f2', border: '1px solid', borderColor: '#991b1b' }}>
+      <CardContent>
+        <Typography variant="body1" fontWeight={700} sx={{ color: '#7f1d1d' }}>
+          ⚠ {overdue} {overdue === 1 ? 'zadanie ma' : 'zadania mają'} przekroczony termin!
+        </Typography>
+        <Button size="small" onClick={() => navigate('/tasks')} sx={{ mt: 1, color: '#991b1b', borderColor: '#991b1b', '&:hover': { bgcolor: '#fee2e2' } }}>
+          Przejdź do zadań →
+        </Button>
+      </CardContent>
+    </Card>
+  </motion.div>
+)}
 
       {/* Recent tasks */}
       <Stack direction={{ xs: 'column', md: 'row' }} spacing={3}>
